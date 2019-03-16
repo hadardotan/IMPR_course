@@ -1,0 +1,6 @@
+Q1: Describe the effect of increasing the residual blocks on its performance for each task, both quantiatively
+in terms of the plot you got and qualitatively in terms of the differences in the image outputs of each model.
+
+The effect of increasing the residual blocks is that the error is decreasing.
+It effect on the images in a way that it is more accurate to predict an image when training with more residual
+blocks, but, as we learned in class, it might also cause overfitting.

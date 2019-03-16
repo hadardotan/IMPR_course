@@ -1,0 +1,13 @@
+Q2: suggest how to use the workflow you have implemented in this assignment to train a network that could be used for
+super-resolution. A full answer consists of a description of the corruption function, and how to properly use the
+restore_image() function for this task. For this context only, you could optionally add additional operations before
+calling to restore_image().
+
+The workflow will go as followed:
+1 - we will define a corruption function with noise of zero padding and with a blur of (1/2, 1, 1/2)
+2 - we will train the network on sets of (small, large) images as followed:
+    we will implement the corruption function on smaller versions of an image to the point it is in the size of the
+    large image and then we will train the network to deblur, denoise.
+    That will cause bring us a larger small image so it will be closer to the original large image.
+3 - we will restore an image: we will first apply our corruption function and then will use predict on the
+    model that we built.

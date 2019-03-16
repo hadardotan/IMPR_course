@@ -1,0 +1,4 @@
+Magnitude of areas in the image with small details compared the size of the image, has more noise/"changes",
+and they reflected as high frequencies in the frequency domain.
+I got two different magnitude images because deriving the image amplify these high frequencies,
+and after Fourier transform the effect stronger.

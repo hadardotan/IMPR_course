@@ -1,0 +1,9 @@
+Q1:
+The quantization procedure needs an initial segment division of [0..255] to segments, z.
+If a division will have a gray level segment with no pixels, the procedure will crash - WHY?
+
+ANSWER:
+As we saw in the tirgul, the formula for finding q (which according to q we find z) includes a division where the
+denominator in this formula s the amount of the pixels in each segment. Therefore, if the initial partition to the
+z segments will include a segment with no pixels, there will be a zero division in the formula for finding q =>
+the procedure will crash.

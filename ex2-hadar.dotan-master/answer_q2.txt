@@ -1,0 +1,7 @@
+If the center of the gaussian will not be at the (0,0) at space domain we will get after "blur_fourier" function a cyclic image.
+the image will have the same blur effect but two times rotated clockwise of the four main corners of the image.
+Every pixel from the input image "spread" over the Fourier image, so that after converting the gaussian matrix to the frequency domain,
+the center of the kernel would be at the four corners.
+by scaling the center of the gaussian to (0,0) reflects that in the frequency domain it would be at the center of the
+spectrum, scaled with the zero frequency component of the Fourier transformed input image.
+The result is that the original position of input image pixels changed.
